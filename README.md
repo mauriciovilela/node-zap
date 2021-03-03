@@ -2,6 +2,7 @@
 ### Free Open Source Whatsapp Api
 
 Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um navegador virtual sem interface gráfica que abre o whatsapp web e executa todos os comandos via código possibilitando assim a automação de todas as funções.
+
 _OBS: está utilizando a versão 3.0.6 do venom-bot_
 
 ## Setup
