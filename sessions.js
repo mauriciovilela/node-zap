@@ -242,13 +242,18 @@ module.exports = class Sessions {
         }
     } //getQrcode
 
-    static async sendText(sessionName, number, text) {
-        var session = Sessions.getSession(sessionName);
+    static async sendText(req) {
+        var params = {
+            sessionName: req.body.sessionName,
+            number: req.body.number,
+            text: req.body.text
+        }    
+        var session = Sessions.getSession(params.sessionName);
         if (session) {
             if (session.state == "CONNECTED") {
                 await session.client.then(async client => {
-                    console.log('#### send msg=' + text + ' phone=' + number + ' session=' + session.name);
-                    return await client.sendText(number + '@c.us', text);
+                    console.log('#### send msg =',  params);
+                    return await client.sendText(params.number + '@c.us', params.text);
                 });
                 return { result: "success" }
             } else {

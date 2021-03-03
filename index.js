@@ -76,12 +76,7 @@ app.get("/qrcode", async (req, res, next) => {
 });//qrcode
 
 app.post("/sendText", async function sendText(req, res, next) {
-    var result = await Sessions.sendText(
-        req.body.sessionName,
-        req.body.number,
-        req.body.text
-    );
-    //console.log(req.body);
+    var result = await Sessions.sendText(req);
     res.json(result);
 });//sendText
 
