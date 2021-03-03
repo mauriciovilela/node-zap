@@ -24,14 +24,6 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 
 `node index.js`
 
-### keep processes alive at every server restart
-
-`npm install -y pm2 -g`
-
-`pm2 start index.js`
-
-`pm2 startup`
-
 ## Usage
 
 ### Start new whatsapp session
@@ -72,3 +64,11 @@ JSONBINIO_SECRET_KEY=345234532452452345243 <- aqui
 ```
 
  - com esses dados o myzap irá gravar o token na nuvem e poderá ser executado em várias instancias diferentes por exemplo no Gooogle Cloud Run
+
+### Manter os processos ativos a cada reinicialização do servidor 
+
+`npm install -y pm2 -g`
+
+`pm2 start index.js`
+
+`pm2 startup`
