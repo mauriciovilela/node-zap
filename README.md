@@ -32,7 +32,7 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 
 ### Get QRCode on terminal
 
-Após iniciar a sessão irá aparecer no terminal o QR CODE
+Após iniciar a sessão irá aparecer no terminal o QR CODE (Registre ele no seu whatsapp)
 
 ### Send message (POST method)
 
