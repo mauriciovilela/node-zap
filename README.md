@@ -30,7 +30,7 @@ _OBS: está utilizando a versão 3.0.6 do venom-bot_
 
 ### Start new whatsapp session
 
-`http://localhost:3333/start?sessionName=session1`
+`http://localhost:3000/start?sessionName=session1`
 
 ### Get QRCode on terminal
 
