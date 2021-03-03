@@ -51,7 +51,8 @@ curl -L -X POST 'http://localhost:3000/sendText' \
 
 `http://localhost:3333/close?sessionName=session1`
 
-## Salvar token do venom na nuvem
+## Salvar token do venom na nuvem (Opcional)
+
  - Crie uma conta grátis no https://jsonbin.io/ 
  - Crie um novo "bin" (objeto json) com quaisquer dados e copie o id dele e coloque no arquivo .env
  - Copie também o seu token de acesso à api do jsonbin.io e coloque no arquivo .env
