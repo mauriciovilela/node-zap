@@ -51,7 +51,7 @@ curl -L -X POST 'http://localhost:3000/sendText' \
 
 ### Close whatsapp session
 
-`http://localhost:3333/close?sessionName=session1`
+`http://localhost:3000/close?sessionName=session1`
 
 ## Salvar token do venom na nuvem (Opcional)
 
