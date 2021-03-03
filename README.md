@@ -16,9 +16,9 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 
 `cd node-zap`
 
-`npm install`
-
 `cp .env-example .env`
+
+`npm install`
 
 ### Start server
 
