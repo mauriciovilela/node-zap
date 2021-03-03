@@ -30,7 +30,7 @@ _OBS: está utilizando a versão 3.0.6 do venom-bot_
 
 ### Start new whatsapp session
 
-`http://localhost:3333/start?sessionName=session1`
+`http://localhost:3000/start?sessionName=session1`
 
 ### Get QRCode on terminal
 
@@ -51,7 +51,7 @@ curl -L -X POST 'http://localhost:3000/sendText' \
 
 ### Close whatsapp session
 
-`http://localhost:3333/close?sessionName=session1`
+`http://localhost:3000/close?sessionName=session1`
 
 ## Salvar token do venom na nuvem (Opcional)
 
