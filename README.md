@@ -37,7 +37,7 @@ Após iniciar a sessão irá aparecer no terminal o QR CODE
 ### Send message (POST method)
 
 ```javascript
-curl -L -X POST 'http://localhost:3333/sendText' \
+curl -L -X POST 'http://localhost:3000/sendText' \
 -H 'Accept: application/json' \
 -H 'Content-Type: application/json' \
 --data-raw '{
