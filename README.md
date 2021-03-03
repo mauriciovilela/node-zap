@@ -9,7 +9,7 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 
 `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
 
-`sudo apt install -y git nodejs`
+`sudo apt install -y git nodejs yarn`
 - para instalar git, nodejs
 
 `git clone https://github.com/mauriciovilela/node-zap.git`
