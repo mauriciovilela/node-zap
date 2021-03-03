@@ -79,9 +79,9 @@ module.exports = class Sessions {
             (base64Qr, asciiQR, attempts) => {
                 // session.state = "QRCODE";
                 session.qrcode = base64Qr;
-              console.log('Number of attempts read qrcode: ', attempts);
-              console.log('Terminal qrcode: ', asciiQR);
-              console.log('base64 image string qrcode: ', base64Qr);
+                console.log('Number attempts read qrcode: ', attempts);
+                console.log('Terminal qrcode: ', asciiQR);
+                console.log('base64 qrcode: ', base64Qr);
             },
             // statusFind
             (statusSession, session) => {
