@@ -76,14 +76,16 @@ module.exports = class Sessions {
 
         const client = await venom.create(
             sessionName,
-            (base64Qr) => {
+            (base64Qr, asciiQR, attempts) => {
                 session.state = "QRCODE";
                 session.qrcode = base64Qr;
-                console.log("new qrcode updated - session.state: " + session.state);
+              console.log('Number of attempts read qrcode: ', attempts);
+              console.log('Terminal qrcode: ', asciiQR);
+              console.log('base64 image string qrcode: ', base64Qr);
             },
-            (statusFind) => {
-                session.status = statusFind;
-                console.log("session.status: " + session.status);
+            // statusFind
+            (statusSession, session) => {
+              console.log('#### status=' + statusSession + ' sessionName=' + session);
             }, {
             headless: true,
             devtools: false,
@@ -136,8 +138,8 @@ module.exports = class Sessions {
             client.onStateChange(state => {
                 session.state = state;
                 if (state == "CONNECTED") {
-                    console.log("tem jsonbinio_secret_key");
                     if (Sessions.options.jsonbinio_secret_key !== undefined && session.browserSessionToken == undefined) {//se informou secret key pra salvar na nuvem
+                        console.log("tem jsonbinio_secret_key");
                         setTimeout(async () => {
                             console.log("gravando token na nuvem...");
                             //salva dados do token da sessão na nuvem

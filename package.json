@@ -1,9 +1,10 @@
 {
-    "name": "myzap",
+    "name": "node-zap",
     "version": "1.0.0",
     "description": "Free OpenSource Whatsapp Api",
     "main": "index.js",
     "scripts": {
+        "start": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Bill Barsch",
@@ -14,6 +15,10 @@
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mime": "^2.4.6",
-        "venom-bot": "^2.2.3"
+        "venom-bot": "^3.0.6"
+    },
+    "engines": {
+        "yarn": "1.22.10",
+        "node": "10.23.0"
     }
 }
