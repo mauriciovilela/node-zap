@@ -77,7 +77,7 @@ module.exports = class Sessions {
         const client = await venom.create(
             sessionName,
             (base64Qr, asciiQR, attempts) => {
-                session.state = "QRCODE";
+                // session.state = "QRCODE";
                 session.qrcode = base64Qr;
               console.log('Number of attempts read qrcode: ', attempts);
               console.log('Terminal qrcode: ', asciiQR);
@@ -246,7 +246,8 @@ module.exports = class Sessions {
         var session = Sessions.getSession(sessionName);
         if (session) {
             if (session.state == "CONNECTED") {
-                var resultSendText = await session.client.then(async client => {
+                await session.client.then(async client => {
+                    console.log('#### send msg=' + text + ' phone=' + number + ' session=' + session.name);
                     return await client.sendText(number + '@c.us', text);
                 });
                 return { result: "success" }
