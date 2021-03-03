@@ -12,9 +12,9 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 `sudo apt install -y git nodejs`
 - para instalar git, nodejs
 
-`git clone https://github.com/billbarsch/myzap.git`
+`git clone https://github.com/mauriciovilela/node-zap.git`
 
-`cd myzap`
+`cd node-zap`
 
 `npm install`
 
@@ -42,30 +42,6 @@ Este projeto usa como base o [Venom-bot](https://github.com/orkestral/venom), um
 
 
 ### Send message (POST method)
-
-```javascript
-(async () => {
-  const response = await fetch('http://localhost:3333/sendText', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(
-        {
-            sessionName: "session1", 
-            number: '556334140378',
-            text:"Hello\nWorld"
-        }
-    )
-  });
-  const content = await response.json();
-
-  console.log(content);
-})();  
-```
-
-### Send File (POST method)
 
 ```javascript
 curl -L -X POST 'http://localhost:3333/sendText' \
