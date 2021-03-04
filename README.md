@@ -32,9 +32,13 @@ _OBS: está utilizando a versão 3.0.6 do venom-bot_
 
 `http://localhost:3000/start?sessionName=session1`
 
-### Get QRCode on terminal
+### Ler QRCode no terminal
 
 Após iniciar a sessão irá aparecer no terminal o QR CODE (Registre ele no seu whatsapp)
+
+### Ler QRCode no browser
+
+`http://localhost:3000/qrcode?sessionName=osdent&image=true`
 
 ### Send message (POST method)
 
