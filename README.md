@@ -75,3 +75,10 @@ JSONBINIO_SECRET_KEY=345234532452452345243 <- aqui
 `pm2 start index.js`
 
 `pm2 startup`
+
+### Utilizar o docker (opcional)
+
+`docker build -t node-zap .`
+
+`docker run -ti -p 3000:3000 --name node-zap --restart=always note-zap`
+
