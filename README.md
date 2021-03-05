@@ -76,7 +76,7 @@ JSONBINIO_SECRET_KEY=345234532452452345243 <- aqui
 
 `npm install -y pm2 -g`
 
-`pm2 start index.js`
+`pm2 start index.js --name "node-zap" --max-memory-restart 120M`
 
 `pm2 startup`
 
