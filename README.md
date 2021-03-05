@@ -32,9 +32,13 @@ _OBS: está utilizando a versão 3.0.6 do venom-bot_
 
 `http://localhost:3000/start?sessionName=session1`
 
-### Get QRCode on terminal
+### Ler QRCode no terminal
 
 Após iniciar a sessão irá aparecer no terminal o QR CODE (Registre ele no seu whatsapp)
+
+### Ler QRCode no browser
+
+`http://localhost:3000/qrcode?sessionName=osdent&image=true`
 
 ### Send message (POST method)
 
@@ -72,6 +76,13 @@ JSONBINIO_SECRET_KEY=345234532452452345243 <- aqui
 
 `npm install -y pm2 -g`
 
-`pm2 start index.js`
+`pm2 start index.js --name "node-zap" --max-memory-restart 120M`
 
 `pm2 startup`
+
+### Utilizar o docker (opcional)
+
+`docker build -t node-zap .`
+
+`docker run -ti -p 3000:3000 --name node-zap --restart=always note-zap`
+
