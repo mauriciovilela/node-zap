@@ -80,8 +80,8 @@ module.exports = class Sessions {
                 // session.state = "QRCODE";
                 session.qrcode = base64Qr;
                 console.log('Number attempts read qrcode: ', attempts);
-                console.log('Terminal qrcode: ', asciiQR);
-                console.log('base64 qrcode: ', base64Qr);
+                // console.log('Terminal qrcode: ', asciiQR);
+                // console.log('base64 qrcode: ', base64Qr);
             },
             // statusFind
             (statusSession, session) => {
